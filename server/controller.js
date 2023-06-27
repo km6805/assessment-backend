@@ -1,7 +1,7 @@
 module.exports = {
 
     getCompliment: (req, res) => {
-        const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
+        const compliments = ["Great job!", "Nice shirt!", "Your Javascript skills are stellar."];
      
         // choose random compliment
         let randomIndex = Math.floor(Math.random() * compliments.length);
@@ -15,7 +15,7 @@ module.exports = {
 
 
     getFortune: (req, res) => {
-        const fortunes = ["A pleasant surprise is waiting for you", "Adventure can be real happiness", "Allow compassion to guide your decisions","Believe it can be done","Congratulations! You are on your way."]
+        const fortunes = ["Every man is the architect of his own fortune.", "A great mind becomes a great fortune.", "Allow compassion to guide your decisions.","Good things come when you least expect them.","A wise man turns chance into good fortune."]
      
         // choose random fortune
         let randomIndex = Math.floor(Math.random() * fortunes.length);
@@ -31,12 +31,12 @@ module.exports = {
     },
 
     putAttempt: (req, res) => {
-        const str = "Everyone can use buttons"
+        const str = "All users can click buttons"
         res.status(200).send(str)
     },
 
     postBtnExample: (req, res) => {
-        const str = "Trying to Post"
+        const str = "Let's Post"
         res.status(200).send(str)
     },
 
