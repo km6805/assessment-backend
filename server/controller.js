@@ -24,20 +24,14 @@ module.exports = {
         res.status(200).send(randomFortunes);
     },
 
-    getPopUp: (req, res) => {
-        let url = "https://www.hdwallpaper.nu/wp-content/uploads/2015/02/maxresdefault.jpg"
+    
 
-        res.status(200).send(url)
-    },
+    getHttp: (req, res) => {
+        const httpCodes = ["Let's Post", "Another get request"]
 
-    putAttempt: (req, res) => {
-        const str = "All users can click buttons"
-        res.status(200).send(str)
-    },
-
-    postBtnExample: (req, res) => {
-        const str = "Let's Post"
-        res.status(200).send(str)
+        let randomIndex = Math.floor(Math.random() * httpCodes.length);
+        let randomCodes = httpCodes[randomIndex];
+        res.status(200).send(randomCodes)
     },
 
     postNumBtn: (req, res) => {

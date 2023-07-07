@@ -13,11 +13,10 @@ app.get("/api/compliment", getCompliment);
 const { getFortune } = require('./controller')
 app.get("/api/fortune", getFortune)
 
-const { putAttempt } = require('./controller')
-app.put("/api/attempt/:id", putAttempt)
 
-const { postBtnExample } = require('./controller')
-app.post("/api/postExample", postBtnExample)
+
+const { getHttp } = require('./controller')
+app.get("/api/http", getHttp)
 
 const { postNumBtn } = require('./controller')
 app.post("/api/postNumButton", postNumBtn)
