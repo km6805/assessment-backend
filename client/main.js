@@ -3,9 +3,9 @@ if (typeof window !== "undefined") {
 const complimentBtn = document.getElementById("complimentButton");
 const fortuneBtn = document.getElementById("fortuneButton")
 const httpBtn = document.getElementById("httpButton")
-const textBox = document.getElementById("inputText")
-const postBtn = document.getElementById("postButton")
-const displayBox = document.getElementById("displayInput")
+const complimentInput = document.getElementById("complimentInput")
+const complimentPostButton = document.getElementById("complimentPostButton")
+const displayInput = document.getElementById("displayInput")
 
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
@@ -22,7 +22,6 @@ const getFortune = () => {
     .then(res => {
      const data = res.data
      alert(data)
-
     });
 
 };
@@ -39,6 +38,14 @@ const getHttp = () => {
 
 httpBtn.addEventListener('click', getHttp)
 
-
+const postCompliment  =  () =>  {
+    axios.post("http://localhost:4000/api/compliment/", {complimentInput: complimentInput.value})
+        .then(res => {
+            const data = res.data;
+            displayInput.innerHTML = data;
+            alert(data)
+    });
+}
+complimentPostButton.addEventListener('click', postCompliment)
 
 }
